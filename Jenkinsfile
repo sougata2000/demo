@@ -7,7 +7,7 @@ pipeline {
 	stages{
 		stage("Docker Image") {
 			steps {
-				sh echo $PATH
+				echo $PATH
 				sh "docker build . -t trg/restdemo:${DOCKER_TAG}"
 				  }
 			}
