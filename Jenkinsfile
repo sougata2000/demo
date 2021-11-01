@@ -2,13 +2,14 @@ pipeline {
 	agent any
 	environment {
 		DOCKER_TAG = getDockerTag()
-	}
+		}
 	
 	stages{
 		stage("Docker Image") {
 			steps {
 				sh "docker build -t trg/restdemo:${DOCKER_TAG}"
-				}
+				  }
+			}
 		
 	}
 	
